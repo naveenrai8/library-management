@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(IncorrectLoginCredentials.class)
-    public ResponseEntity<Map<String, String>> handleIncorrectLoginCredentialsø(IncorrectLoginCredentials exp) {
+    public ResponseEntity<Map<String, String>> handleIncorrectLoginCredentials(IncorrectLoginCredentials exp) {
         Map<String, String> errors = Map.of("error", exp.getMessage());
         return ResponseEntity.badRequest().body(errors);
     }

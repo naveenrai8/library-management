@@ -2,7 +2,6 @@ package com.nr.authservice.util;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import org.assertj.core.util.DateUtil;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -17,7 +16,7 @@ public class JwtUtil {
 
     public String generateToken(String userId, String username, List<String> roles) {
         SecretKey key = Keys.hmacShaKeyFor(SECRET.getBytes());
-        var now = DateUtil.now();
+        var now = new Date();
         return Jwts.builder()
                 .subject(userId)
                 .claim("username", username)

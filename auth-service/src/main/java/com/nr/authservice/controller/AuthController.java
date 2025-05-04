@@ -1,5 +1,6 @@
-package com.nr.authservice;
+package com.nr.authservice.controller;
 
+import com.nr.authservice.service.AuthService;
 import com.nr.authservice.dto.LoginRequestDTO;
 import com.nr.authservice.dto.LoginResponseDTO;
 import com.nr.authservice.exception.IncorrectLoginCredentials;

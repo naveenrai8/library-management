@@ -1,4 +1,4 @@
-package com.nr.authservice;
+package com.nr.authservice.service;
 
 import com.nr.authservice.dto.LoginRequestDTO;
 import com.nr.authservice.exception.IncorrectLoginCredentials;
@@ -10,8 +10,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.text.MessageFormat;
 
 @Service
 @RequiredArgsConstructor
